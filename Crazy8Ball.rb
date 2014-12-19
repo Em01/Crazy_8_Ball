@@ -64,5 +64,15 @@ def get_question
 end
 
 #This method displays the 8 ball answers
+def tell_fortune(randomAnswer)
+	print "The answer is " + randomAnswer + ". \n\n: "
+end
+
 #This method displays the 8 ball's closing message
+def say_goodby
+	goodbye = "Thanks for playing the game!\n\n"
+	puts goodbye
+end
+
+end
 
