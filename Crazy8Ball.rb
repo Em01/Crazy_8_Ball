@@ -44,3 +44,25 @@ class Ball
 		$prediction = "unknown"
 	end
 end
+
+
+#This method displays the greeting method
+def say_greeting
+	greeting = "\t\t Welcome to the Virtual Crazy 8 Ball game!"
+	 + "\n\n\n\n\n\n\n\n\n\nPress Enter to " 
+	 		"continue. \n\n: "
+	 print greeting
+	end
+
+
+
+	end
+#This method displays the 8 balls primary query 
+def get_question
+	question = "Type your question and then press enter. \n\n: "
+	print question
+end
+
+#This method displays the 8 ball answers
+#This method displays the 8 ball's closing message
+
