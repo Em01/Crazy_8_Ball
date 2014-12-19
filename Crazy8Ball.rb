@@ -76,3 +76,16 @@ end
 
 end
 
+#Main Script Logic -----------------------------------------------------------------------------------------
+
+Console_Screen = Screen.new #Initialize new screen object
+Eight_Ball = Ball.new #Initialize a new Ball object
+
+Console_Screen.cls #Clear the display area
+
+Eight_Ball.say_greeting #Call the method responsible for greeting the player
+
+Console_Screen.pause #Pause game
+
+
+
