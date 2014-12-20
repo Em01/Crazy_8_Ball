@@ -25,7 +25,6 @@ class Ball
 	#Define a method to generate random answers
 	def get_fortune
 		randomNo = 1 + rand(6)
-	end
 
 	#Assign an answer based on the random generated number
 	case randomNo
@@ -48,9 +47,9 @@ end
 
 #This method displays the greeting method
 def say_greeting
-	greeting = "\t\t Welcome to the Virtual Crazy 8 Ball game!"
-	 + "\n\n\n\n\n\n\n\n\n\nPress Enter to " 
-	 		"continue. \n\n: "
+	greeting = "\t\t Welcome to the Virtual Crazy 8 Ball game!" + 
+	"\n\n\n\n\n\n\n\n\n\nPress Enter to " + 
+			"continue. \n\n: "
 	 print greeting
 	end
 
@@ -66,12 +65,12 @@ def tell_fortune(randomAnswer)
 end
 
 #This method displays the 8 ball's closing message
-def say_goodby
+def say_goodbye
 	goodbye = "Thanks for playing the game!\n\n"
 	puts goodbye
 end
 
-
+end
 #Main Script Logic -----------------------------------------------------------------------------------------
 
 Console_Screen = Screen.new #Initialize new screen object
@@ -98,7 +97,46 @@ until answer == "y" || answer == "n"
 
 end
 
+#Analyze players response
+if answer == "n" #See if player chose not to play
 
+Console_Screen.cls 
+
+puts "Perhaps another time. \n\n"
+
+else #The player chose to play
+
+#Initialize variable used to control the games primary loop
+gameOver = "N"
+
+#Loop until player quits
+until gameOver == "Yes"
+
+	Console_Screen.cls #Clears display area
+
+	#Call method responsible for generating an answer
+	Eight_Ball.get_fortune
+
+	Console_Screen.pause
+
+	Console_Screen.cls 
+
+	#Call method responsible for telling 8 ball's answer
+	Eight_Ball.tell_fortune $prediction
+
+	Console_Screen.pause 
+
+	Console_Screen.cls 
+	print "Press Enter to ask another question or q to quit. \n\n: "
+
+	answer = STDIN.gets 
+	answer.chop!
+
+	if answer == "q"
+		gameOver == "Yes"
+end
+end
+end
 
 
 
