@@ -42,6 +42,7 @@ class Ball
 	when 6
 		$prediction = "unknown"
 	end
+
 end
 
 
@@ -67,7 +68,7 @@ end
 #This method displays the 8 ball's closing message
 def say_goodbye
 	goodbye = "Thanks for playing the game!\n\n"
-	print goodbye
+	puts goodbye
 end
 
 end
@@ -137,12 +138,16 @@ until gameOver == "Yes"
 	if answer == "q"
 		gameOver == "Yes"
 end
-end
 
-Console_Screen.cls 
+		Console_Screen.cls 
 
 Eight_Ball.say_goodbye
 
-
-
 end
+end
+	
+
+
+
+
+
