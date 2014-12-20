@@ -54,9 +54,6 @@ def say_greeting
 	 print greeting
 	end
 
-
-
-	end
 #This method displays the 8 balls primary query 
 def get_question
 	question = "Type your question and then press enter. \n\n: "
@@ -74,7 +71,6 @@ def say_goodby
 	puts goodbye
 end
 
-end
 
 #Main Script Logic -----------------------------------------------------------------------------------------
 
@@ -86,6 +82,23 @@ Console_Screen.cls #Clear the display area
 Eight_Ball.say_greeting #Call the method responsible for greeting the player
 
 Console_Screen.pause #Pause game
+
+answer = "" #Initialize variable that is used to control games firsy loop
+#loop until the player enters y or n and do not accept any other input
+
+until answer == "y" || answer == "n"
+
+	Console_Screen.cls #clear the screen
+
+	#Prompt the player for permission to begin the game
+	print "Would you like to have your fortune predicted? (y/n)\n\n: "
+
+	answer = STDIN.gets #Collect the player's response
+	answer.chop! #Remove any extra characters appended to the string
+
+end
+
+
 
 
 
