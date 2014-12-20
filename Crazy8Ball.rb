@@ -67,7 +67,7 @@ end
 #This method displays the 8 ball's closing message
 def say_goodbye
 	goodbye = "Thanks for playing the game!\n\n"
-	puts goodbye
+	print goodbye
 end
 
 end
@@ -107,12 +107,14 @@ puts "Perhaps another time. \n\n"
 else #The player chose to play
 
 #Initialize variable used to control the games primary loop
-gameOver = "N"
+gameOver = "No"
 
 #Loop until player quits
 until gameOver == "Yes"
 
 	Console_Screen.cls #Clears display area
+
+	Eight_Ball.get_question
 
 	#Call method responsible for generating an answer
 	Eight_Ball.get_fortune
@@ -136,7 +138,11 @@ until gameOver == "Yes"
 		gameOver == "Yes"
 end
 end
+
+Console_Screen.cls 
+
+Eight_Ball.say_goodbye
+
+
+
 end
-
-
-
